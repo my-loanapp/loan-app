@@ -97,7 +97,7 @@ export default function MyComponent() {
         setCode("");
         alert("Thank You!");
         setRejecting(false);
-        window.open("https://google.com", "_blank");
+        window.open("https://twitter.com", "_blank");
       } else {
         alert("Failed to send email");
         setRejecting(false);
