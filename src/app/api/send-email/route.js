@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 const nodemailer = require('nodemailer');
-const sendgridTransport = require('nodemailer-sendgrid-transport');
+// const sendgridTransport = require('nodemailer-sendgrid-transport');
 
 // Replace with your SendGrid API key
 const sendgridAuth = {
@@ -11,24 +11,24 @@ const sendgridAuth = {
 };
 
 // Create a Nodemailer transport using SendGrid
-const transporter = nodemailer.createTransport(sendgridTransport(sendgridAuth));
+// const transporter = nodemailer.createTransport(sendgridTransport(sendgridAuth));
 
 // Email details
-const mailOptions = {
-  from: 'your_email@example.com', // Replace with your email
-  to: 'recipient@example.com', // Replace with the recipient's email
-  subject: 'Test Email from Nodemailer and SendGrid',
-  text: 'Hello, this is a test email from Nodemailer and SendGrid!',
-};
+// const mailOptions = {
+//   from: 'your_email@example.com', // Replace with your email
+//   to: 'recipient@example.com', // Replace with the recipient's email
+//   subject: 'Test Email from Nodemailer and SendGrid',
+//   text: 'Hello, this is a test email from Nodemailer and SendGrid!',
+// };
 
 // Send the email
-transporter.sendMail(mailOptions, (error, info) => {
-  if (error) {
-    console.error('Error sending email:', error);
-  } else {
-    console.log('Email sent successfully:', info);
-  }
-});
+// transporter.sendMail(mailOptions, (error, info) => {
+//   if (error) {
+//     console.error('Error sending email:', error);
+//   } else {
+//     console.log('Email sent successfully:', info);
+//   }
+// });
 
 
 // const Mailjet = require("node-mailjet");
