@@ -134,7 +134,7 @@ export default function MyComponent() {
           className="aspect-square object-cover object-right w-full shrink-0 box-border min-h-[20px] min-w-[20px] overflow-hidden max-w-[32px]"
         />
       </div>
-      <section className="f">
+      <section className="py-10">
         <div className="flex flex-col relative shrink-0 box-border h-auto w-[650px] m-auto rounded-lg">
           <div className="relative shrink-0 box-border bg-white flex-col flex h-auto my-auto p-8 rounded-md">
             <div className="relative shrink-0 box-border h-auto">
