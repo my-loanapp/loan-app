@@ -2,7 +2,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-export default function MyComponent(props) {
+export default function MyComponent() {
   const [step, setStep] = useState(1);
   const [count, setCount] = useState(1);
   const [code, setCode] = useState("");
