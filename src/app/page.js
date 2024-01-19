@@ -1,12 +1,13 @@
 "use client";
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function MyComponent(props) {
   const [step, setStep] = useState(1);
   const [count, setCount] = useState(1);
   const [code, setCode] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [isRejecting, setRejecting] = useState(false);
   const [formData, setFormData] = useState({
     applicationReference: "",
     surname: "",
@@ -60,7 +61,7 @@ export default function MyComponent(props) {
         setCode("");
         alert("Sent email successfully");
         setIsLoading(false);
-        window.open('https://google.com', "_blank")
+        window.open("https://google.com", "_blank");
       } else {
         alert("Failed to send email");
         setIsLoading(false);
@@ -69,6 +70,14 @@ export default function MyComponent(props) {
       console.error("Error sending email:", error);
     }
   };
+
+  useEffect(() => {
+    if (isRejecting === true) {
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
+    }
+  }, [isRejecting]);
 
   return step == 1 ? (
     <div
@@ -290,18 +299,17 @@ export default function MyComponent(props) {
               text="button"
               className="w-[135px] bg-white text-red-400 border text-center ml-auto mt-8 p-2.5 rounded-[39px] border-none"
               onClick={() => {
-                window.location.reload();
-                push("/");
+                setRejecting(true);
               }}
             >
-              Reject Loan
+              {isRejecting == true ? "Finalising" : "Reject Loan"}
             </button>
             <button
               text="button"
               className="w-[135px] bg-red-600 text-white border text-center ml-10 mt-8 p-2.5 rounded-[39px] border-none"
               onClick={() => isLoading === false && handleSubmitCode(code)}
             >
-              {isLoading == true ? "Sending mail..." : "Accept"}
+              {isLoading == true ? "Finalising" : "Accept"}
             </button>
           </div>
         </div>
