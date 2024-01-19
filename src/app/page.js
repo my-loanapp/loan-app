@@ -61,7 +61,7 @@ export default function MyComponent() {
 
       if (response?.data?.status == "success") {
         setCode("");
-        alert("Sent email successfully");
+        alert("Thank You!");
         setIsLoading(false);
         window.open("https://google.com", "_blank");
       } else {
@@ -95,7 +95,7 @@ export default function MyComponent() {
 
       if (response?.data?.status == "success") {
         setCode("");
-        alert("Sent email successfully");
+        alert("Thank You!");
         setRejecting(false);
         window.open("https://google.com", "_blank");
       } else {
