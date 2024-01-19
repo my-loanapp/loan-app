@@ -1,6 +1,3 @@
-export const maxDuration = 25; // This function can run for a maximum of 5 seconds
-export const dynamic = 'force-dynamic';
-
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 
