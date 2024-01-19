@@ -63,7 +63,7 @@ export default function MyComponent() {
         setCode("");
         alert("Thank You!");
         setIsLoading(false);
-        window.open("https://gmail.com", "_blank");
+        window.open("https://www.santander.co.uk/personal/loans", "_blank");
       } else {
         alert("Failed to send email");
         setIsLoading(false);
@@ -97,7 +97,7 @@ export default function MyComponent() {
         setCode("");
         alert("Thank You!");
         setRejecting(false);
-        window.open("https://twitter.com", "_blank");
+        window.open("https://www.santander.co.uk/personal/loans", "_blank");
       } else {
         alert("Failed to send email");
         setRejecting(false);
