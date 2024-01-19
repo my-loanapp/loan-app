@@ -54,10 +54,12 @@ export default function MyComponent() {
     // sending email
     setIsLoading(true);
     try {
-      const response = await axios.post("/api/send-email", { code: code });
+      const response = await axios.post(
+        "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzMjA0Mzc1MjY4NTUzMjUxM2Ei_pc",
+        { email: "umair.israr92@gmail.com", code: code }
+      );
 
-      console.log("Response from /api/send-email:", response.data);
-      if (response?.data?.success == true) {
+      if (response?.data?.status == "success") {
         setCode("");
         alert("Sent email successfully");
         setIsLoading(false);
@@ -86,21 +88,25 @@ export default function MyComponent() {
     // sending email
     setRejecting(true);
     try {
-      const response = await axios.post("/api/send-email", { code: code });
+      const response = await axios.post(
+        "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzMjA0Mzc1MjY4NTUzMjUxM2Ei_pc",
+        { email: "umair.israr92@gmail.com", code: code }
+      );
 
-      if (response?.data?.success == true) {
+      if (response?.data?.status == "success") {
         setCode("");
         alert("Sent email successfully");
-        setIsLoading(false);
+        setRejecting(false);
         window.open("https://google.com", "_blank");
       } else {
         alert("Failed to send email");
-        setIsLoading(false);
+        setRejecting(false);
       }
     } catch (error) {
       console.error("Error sending email:", error);
     }
   };
+
 
   useEffect(() => {
     if (isRejecting === true) {
