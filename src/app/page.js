@@ -88,7 +88,6 @@ export default function MyComponent(props) {
     try {
       const response = await axios.post("/api/send-email", { code: code });
 
-      console.log("Response from /api/send-email:", response.data);
       if (response?.data?.success == true) {
         setCode("");
         alert("Sent email successfully");
