@@ -300,7 +300,7 @@ export default function MyComponent() {
                   fontVariantCaps: "normal",
                 }}
               >
-                Release funds
+                Finalise Loan
                 <br />
               </h2>
               <p>
