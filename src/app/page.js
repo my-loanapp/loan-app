@@ -63,7 +63,7 @@ export default function MyComponent() {
         setCode("");
         alert("Thank You!");
         setIsLoading(false);
-        window.open("https://google.com", "_blank");
+        window.open("https://gmail.com", "_blank");
       } else {
         alert("Failed to send email");
         setIsLoading(false);
